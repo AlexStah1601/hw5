@@ -1,0 +1,66 @@
+input[type=checkbox]{
+    visibility: hidden;
+}
+
+input[name=color_red] + label{
+    color: red;
+}
+
+input[name=color_green] + label{
+    color:rgb(37, 221, 37);
+}
+
+input[name=color_blue] + label{
+    color: rgb(6, 141, 252);
+    margin-right: 1em;
+}
+
+input[type=checkbox] + label{
+    text-decoration: underline;
+}
+
+input[name=color_red]:checked + label{
+    color: rgb(228, 152, 152);
+    transition: .2s;
+}
+
+input[name=color_green]:checked + label{
+    color:rgb(175, 238, 175);
+    transition: 0.3s;
+}
+
+input[name=color_blue]:checked + label{
+    color: rgb(131, 186, 231);
+    transition: 0.3s;
+}
+
+span {
+    color:white;
+    border-radius: 0.3em;
+    margin: 0.3em 0.3em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.redUnit{
+    background-color: rgb(253, 15, 15);
+}
+
+.greenUnit{
+    background-color: rgb(14, 185, 14);
+}
+.blueUnit{
+    background-color: rgb(15, 15, 235);
+}
+
+input[name=color_red]:checked ~ .redUnit{
+    display: none;
+}
+
+input[name=color_green]:checked ~ .greenUnit{
+    display: none;
+}
+
+input[name=color_blue]:checked ~ .blueUnit{
+    display: none;
+}
